@@ -1,6 +1,3 @@
-using MDTables
-using Test
+using SafeTestsets
 
-@testset "MDTables.jl" begin
-    # Write your tests here.
-end
+@safetestset "load tests" begin include("load_tests.jl") end

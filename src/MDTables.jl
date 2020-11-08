@@ -1,5 +1,7 @@
 module MDTables
 
-# Write your package code here.
+include("load.jl")
+
+export loadMDTable
 
 end
