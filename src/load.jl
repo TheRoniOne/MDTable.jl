@@ -37,5 +37,3 @@ function parseLine!(line::String, mdTable::Dict, headersClean::Array)
         push!(mdTable[headersClean[i]], value)
     end
 end
-
-loadMDTable("file.md")
