@@ -28,7 +28,7 @@ end
 
 function parseLine!(line::String, mdTable::Dict, headersClean::Array)
     values = split(line, "|", keepempty=false)
-    if lenght(values) != length(headersClean)
+    if length(values) != length(headersClean)
         error("The number of values in a line must be the same as the number of headers of the file")
     end
 
