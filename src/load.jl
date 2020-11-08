@@ -21,7 +21,7 @@ function parseHeader!(line::String, mdTable::Dict, headersClean::Array)
         key = lstrip(rstrip(value))
         if key != ""
             mdTable[key] = []
-            append!(headersClean, key)
+            push!(headersClean, key)
         end
     end
 end
@@ -34,6 +34,8 @@ function parseLine!(line::String, mdTable::Dict, headersClean::Array)
 
     for i in 1:length(values)
         value = lstrip(rstrip(values[i]))
-        append!(mdTable[headersClean[i]], value)
+        push!(mdTable[headersClean[i]], value)
     end
 end
+
+loadMDTable("file.md")
