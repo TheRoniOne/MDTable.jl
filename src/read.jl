@@ -1,4 +1,6 @@
-function loadMDTable(file::String;header=true)
+using DataFrames: DataFrame
+
+function readMDTable(file::String; header::Bool=true)::DataFrame
     mdTable = Dict()
     headersClean::Array = []
     skip::Bool = header
@@ -12,7 +14,7 @@ function loadMDTable(file::String;header=true)
             parseLine!(line, mdTable, headersClean)
         end
     end
-    return mdTable
+    return DataFrame(mdTable)
 end
 
 function parseHeader!(line::String, mdTable::Dict, headersClean::Array)
@@ -36,4 +38,8 @@ function parseLine!(line::String, mdTable::Dict, headersClean::Array)
         value = lstrip(rstrip(values[i]))
         push!(mdTable[headersClean[i]], value)
     end
+end
+
+function load(f::File{format"MD"}; header::Bool=true)
+    return readMDTable(f.filename, header=header)
 end

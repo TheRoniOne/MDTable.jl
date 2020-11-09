@@ -1,14 +1,16 @@
 using MDTables
 using Test
+using DataFrames: DataFrame, size
 
-@testset "Load Tests" begin
-    loaded = loadMDTable("file.md")
-    @test loaded isa Dict
-    @test length(loaded) == 4
+@testset "Read Tests" begin
+    let loaded = readMDTable("file.md")
+        @test loaded isa DataFrame
+        @test size(loaded) == (2, 4)
+    end
 
     let err = nothing
         try
-            loadMDTable("fileErr.md")
+            readMDTable("fileErr.md")
         catch err
         end
 

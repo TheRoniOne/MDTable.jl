@@ -1,9 +1,9 @@
 module MDTables
 
-include("load.jl")
-include("save.jl")
+include("read.jl")
+include("write.jl")
 
-export loadMDTable
-export saveMDTable
+export readMDTable
+export writeMDTable
 
 end

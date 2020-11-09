@@ -1,3 +1,3 @@
 using SafeTestsets
 
-@safetestset "load tests" begin include("load_tests.jl") end
+@safetestset "read tests" begin include("read_tests.jl") end
