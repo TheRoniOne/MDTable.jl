@@ -10,23 +10,22 @@ function writeMDTable(fileName::String, df)
         headers::String = ""
         for i in 1:length(names)
             if i != length(names)
-                headers = headers * "| $names[i] "
+                headers = headers * "| $(names[i]) "
             else
-                headers = headers * "| $names[i] " * "|"
+                headers = headers * "| $(names[i]) " * "|\n"
             end
         end
         write(io, headers)
     end
 
     open(fileName, "a") do io
+        write(io, "| --- " ^ length(names) * "|\n")
         for row in rows
             line::String = ""
             Tables.eachcolumn(sch, row) do val, i, nm
-                if i == 1
-                    line = line * "| $val "
-                end
+                line = line * "| $val "
             end
-            write(io, line * "|")
+            write(io, line * "|\n")
         end
     end
 end
