@@ -1,4 +1,5 @@
-using DataFrames: DataFrame, FileIO
+using DataFrames: DataFrame
+using FileIO
 
 function readMDTable(file::String; header::Bool=true)::DataFrame
     mdTable::NamedTuple = NamedTuple()

@@ -11,3 +11,7 @@ function writeMDTable(fileName::String, df)
         end
     end
 end
+
+function save(f::File{format"PNG"}, df)
+    writeMDTable(f.filename, df)
+end
