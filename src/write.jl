@@ -30,6 +30,6 @@ function writeMDTable(fileName::String, df)
     end
 end
 
-function save(f::File{format"PNG"}, df)
+function save(f::File{format"MD"}, df)
     writeMDTable(f.filename, df)
 end
