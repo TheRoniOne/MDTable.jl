@@ -1,9 +1,9 @@
-using Documenter, MDTables
+using Documenter, MDTable
 
 makedocs(
-    sitename = "MDTables.jl"  
+    sitename = "MDTable.jl"  
 )
 
 deploydocs(
-    repo = "github.com/TheRoniOne/MDTables.jl.git",
+    repo = "github.com/TheRoniOne/MDTable.jl.git",
 )

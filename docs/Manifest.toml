@@ -112,11 +112,11 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
-[[MDTables]]
+[[MDTable]]
 deps = ["DataFrames", "FileIO", "Tables"]
 path = ".."
 uuid = "8d33431a-4cd1-474f-bd1e-ccfbc4b78fb4"
-version = "0.1.0"
+version = "0.1.1"
 
 [[Markdown]]
 deps = ["Base64"]

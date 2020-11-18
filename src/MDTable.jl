@@ -1,4 +1,4 @@
-module MDTables
+module MDTable
 
 include("read.jl")
 include("write.jl")

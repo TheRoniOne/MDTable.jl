@@ -1,4 +1,4 @@
-using MDTables
+using MDTable
 using Test
 using DataFrames: DataFrame, size, names
 

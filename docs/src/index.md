@@ -1,8 +1,8 @@
 ```@meta
-CurrentModule = MDTables
+CurrentModule = MDTable
 ```
 
-# MDTables
+# MDTable
 **A package for reading and writing MD tables.**
 
 ## Index
