@@ -1,7 +1,7 @@
 name = "MDTables"
 uuid = "8d33431a-4cd1-474f-bd1e-ccfbc4b78fb4"
 authors = ["Ronald Gamez"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
