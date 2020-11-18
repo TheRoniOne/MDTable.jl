@@ -13,6 +13,6 @@ CurrentModule = MDTables
 ## Documentation
 
 ```@docs
-readMDTable(file::String; header::Bool=true)::DataFrame
+readMDTable(file::String; header::Bool=true)
 writeMDTable(fileName::String, df)
 ```
