@@ -1,6 +1,13 @@
 using DataFrames: DataFrame
 using FileIO
 
+"""
+    readMDTable(file::String; header::Bool=true)::DataFrame
+
+Reads into a DataFrame any MD table file.
+<br>
+It's assumed the file will have a header, but can be specified with header=false if there isn't one.
+"""
 function readMDTable(file::String; header::Bool=true)::DataFrame
     mdTable::NamedTuple = NamedTuple()
     skip::Bool = header
@@ -54,6 +61,12 @@ function parseLine!(line::String, mdTable::NamedTuple)
     end
 end
 
+"""
+    load(f::File{format"MD"}; header::Bool=true)
+
+Reads into a DataFrame any MD table file.
+It's assumed the file will have a header, but can be specified with header=false if there isn't one.
+"""
 function load(f::File{format"MD"}; header::Bool=true)
     return readMDTable(f.filename, header=header)
 end

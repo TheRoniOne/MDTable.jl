@@ -1,6 +1,11 @@
 using DataFrames: DataFrame
 using Tables, FileIO
 
+"""
+    writeMDTable(fileName::String, df)
+
+Creates or overwrites a file named as fileName writing in it, under MD table format, the content of any type that implements the [Tables.jl](https://github.com/JuliaData/Tables.jl) interface.
+"""
 function writeMDTable(fileName::String, df)
     rows = Tables.rows(df)
     sch = Tables.schema(rows)
@@ -30,6 +35,11 @@ function writeMDTable(fileName::String, df)
     end
 end
 
+"""
+    save(f::File{format"MD"}, df)
+
+Creates or overwrites a file named as fileName writing in it, under MD table format, the content of any type that implements the [Tables.jl](https://github.com/JuliaData/Tables.jl) interface.
+"""
 function save(f::File{format"MD"}, df)
     writeMDTable(f.filename, df)
 end
