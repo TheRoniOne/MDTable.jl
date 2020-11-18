@@ -4,8 +4,7 @@ using FileIO
 """
     readMDTable(file::String; header::Bool=true)::DataFrame
 
-Reads into a DataFrame any MD table file.
-<br>
+Reads into a DataFrame any MD table file.\n
 It's assumed the file will have a header, but can be specified with header=false if there isn't one.
 """
 function readMDTable(file::String; header::Bool=true)::DataFrame
